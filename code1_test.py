@@ -1,21 +1,19 @@
 from code1 import total
 
-def test_total () :
-    # Vérifie le fonctionnement de base :
-    a = total([1, 2 ,3]) == 6
+def test_total():
+    #Les use cases :
+    """La somme de plusieurs éléments d'une liste doit être correcte"""
+    assert(total([1.0, 2.0, 3.0])) == 6.0
 
-    # Vérifie que la somme marche avec un nombre négatif et un positif :
-    b = total([1, -1]) == 0
+    """1 - 1 = 0"""
+    assert total([1,-1]) == 0
 
-    # Vérifie que la somme marche avec deux négatifs :
-    c = total([-1, -1]) == -2
+    """-1 -1 = -2"""
+    assert total([-1,-1]) == -2
 
-    # Vérifie que la somme marche avec un seul élément :
-    d = total([1]) == 1
+    #Les edge cases :
+    """La somme doit être égal à l'unique élément"""
+    assert(total([1.0])) == 1.0
 
-    # Vérifie que la liste vide renvoie bien 0 :
-    e = total([]) == 0
-
-    return (a, b, c, d, e)
-
-print(test_total())
+    """La somme d'une liste vide doit être 0"""
+    assert total([]) == 0
