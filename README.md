@@ -1,2 +1,2 @@
-# github-unit-test
+# unit-test-training
 Illustration des test unitaire avec github
